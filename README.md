@@ -4,7 +4,7 @@
 
 ![Portfolio Ricky Salazar](assets/images/portafolio-completo.png) 
 
-## ✨ [Ver Demo en Vivo](https://tu-usuario.github.io/tu-repositorio/) 
+## ✨ [Ver Demo en Vivo](https://rickymichael.github.io/rickysalazar/) 
 
 ## 🚀 Características
 
