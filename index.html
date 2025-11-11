@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricky Salazar | Professional Web Developer & Automation Expert</title>
+
+    <meta name="description" content="I'm Ricky Salazar, a freelance web developer and graphic designer specializing in custom WordPress and React websites. I create fast, modern sites and automate workflows with N8N, Zapier, and Make to help businesses scale efficiently.">
+    <meta name="keywords" content="freelance web developer, WordPress website developer, React web development, custom web design services, web automation expert">
+    <meta name="author" content="Ricky Salazar">
+    <link rel="icon" type="image/png" href="img/rs.ico">
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rickysalazar.xyz/"> <!-- URL de tu sitio en vivo -->
+    <meta property="og:title" content="Ricky Salazar | Professional Web Developer & Automation Expert">
+    <meta property="og:description" content="I'm Ricky Salazar, a freelance web developer and graphic designer specializing in custom WordPress and React websites. I create fast, modern sites and automate workflows with N8N, Zapier, and Make to help businesses scale efficiently.">
+    <meta property="og:image" content="https://rickysalazar.xyz/assets/images/banner-rs.webp"> <!-- Una imagen atractiva de 1200x630px -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rickysalazar.xyz/">
+    <meta property="twitter:title" content="Ricky Salazar | Professional Web Developer & Automation Expert">
+    <meta property="twitter:description" content="I'm Ricky Salazar, a freelance web developer and graphic designer specializing in custom WordPress and React websites. I create fast, modern sites and automate workflows with N8N, Zapier, and Make to help businesses scale efficiently.">
+    <meta property="twitter:image" content="https://rickysalazar.xyz/assets/images/banner-rs.webp">
+</head>
+<body>
+
+    <!-- ======== PÁGINA DE PRECARGA ======== -->
+    <div id="preloader">
+        <!-- Cambia 'logo.png' por la ruta a tu propio logo -->
+        <img src="assets/images/rs.webp" alt="Logo Ricky Salazar" class="preloader-logo" loading="lazy">
+        <div class="preloader-progress-bar-container">
+            <div id="preloader-progress-bar" class="preloader-progress-bar-fill"></div>
+        </div>
+    </div>
+    <!-- ======== FIN DE PÁGINA DE PRECARGA ======== -->
+
+    <!-- ======== ENCABEZADO ======== -->
+    <header class="header">
+        <button class="menu-button" id="menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-right"> <!-- Agregamos un div para agrupar el nombre y el botón -->
+            <div class="user-name">
+                <a href="#">Ricky Salazar</a>
+            </div>
+            <!-- ======== ESTE ES EL NUEVO BOTÓN ======== -->
+            <button class="theme-toggle-button" id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon" id="theme-toggle-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ======== MENÚ LATERAL ======== -->
+    <div class="sidebar" id="sidebar">
+        <!-- ======== ESTE ES EL NUEVO BOTÓN DE CIERRE ======== -->
+        <button id="close-sidebar-button" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i> <!-- Icono de 'X' de Font Awesome -->
+        </button>
+        <!-- =================================================== -->
+        <div class="logo-pic-container">
+                 <img src="assets/images/rs.webp" alt="Logo Ricky Salazar" class="logo-pic" loading="lazy">
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#perfil" class="nav-link">Profile</a>
+            <a href="#educacion" class="nav-link">Education</a>
+            <a href="#experiencia" class="nav-link">Experience</a>
+            <a href="#habilidades" class="nav-link">Skills</a>
+            <a href="#intereses" class="nav-link">Interest</a>
+            <a href="#cartera" class="nav-link">Portfolio</a>
+            <a href="#contacto" class="nav-link">Contact</a>
+        </nav>
+    </div>
+    
+    <!-- ======== CONTENEDOR PRINCIPAL DE LA PÁGINA ======== -->
+    <div class="page-container">
+        
+        <!-- ======== COLUMNA IZQUIERDA (20%) - FOTO Y TIMELINE ======== -->
+        <aside class="left-column">
+            <div class="profile-pic-container">
+                 <img src="assets/images/profile ricky.webp" alt="Foto de perfil" class="profile-pic" loading="lazy">
+            </div>
+            <!-- La línea de tiempo ahora está dentro de la columna izquierda -->
+            <div class="timeline">
+                <div class="timeline-progress" id="timeline-progress"></div>
+                <div class="timeline-items">
+                    <div class="timeline-item" data-section="perfil"></div>
+                    <div class="timeline-item" data-section="educacion"></div>
+                    <div class="timeline-item" data-section="experiencia"></div>
+                    <div class="timeline-item" data-section="habilidades"></div>
+                    <div class="timeline-item" data-section="intereses"></div>
+                    <div class="timeline-item" data-section="cartera"></div>
+                    <div class="timeline-item" data-section="contacto"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ======== COLUMNA DERECHA (80%) - CONTENIDO PRINCIPAL ======== -->
+        <main class="right-column">
+            <!-- ======== SECCIÓN: PERFIL (SOLO TEXTO) ======== -->
+            <section id="perfil" class="section" data-aos="fade-up">
+                <div class="profile-text-container">
+                    <h1 class="profile-name">Hi, I am Ricky Salazar</h1>
+                    <p class="profile-description">Bachelor's degree in Computer Engineering with a focus on web systems development. I possess a notable ability to adapt to different work environments and a strong commitment to quality and results. I am characterized by my ease with teamwork and my genuine interest in continuous learning and professional development.</p>
+                    <a href="assets/documents/CV-Ricky-Salazar.pdf" download="CV-Ricky-Salazar" class="btn-cv">Download Resume <i class="fas fa-download"></i></a>
+                    <a href="#contacto" class="btn-cv">Send a Message <i class="fas fa-mail-bulk"></i></a>
+                    <!-- ======== INICIO DEL CÓDIGO A AGREGAR ======== -->
+                    <div class="social-icons">
+                        <!-- Reemplaza '#' con tus enlaces reales -->
+                        <a href="https://www.linkedin.com/in/ricky-salazar-r/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/RickyMichael" target="_blank" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!-- <a href="#" target="_blank" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a> -->
+                        <a href="https://www.instagram.com/rickysalazarronto/" target="_blank" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- ======== FIN DEL CÓDIGO A AGREGAR ======== -->
+                </div>
+            </section>
+
+            <!-- ======== SECCIÓN: EDUCACIÓN ======== -->
+            <section id="educacion" class="section">
+                <h2 class="section-title" data-aos="fade-up">Education</h2>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>Universidad Nacional Federico Villareal</h3>
+                    <p>Computer Engineering (2017 - 2022)</p>
+                    <small>Specialization in systems development and workflow automation.</small>
+                </div>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>Exclusive Class</h3>
+                    <p>Graphic Designer (2010)</p>
+                    <small>Specialization in Interface Design (UI) and User Experience (UX), applying graphic design principles to create intuitive web solutions.</small>
+                </div>
+            </section>
+
+            <!-- ======== SECCIÓN: EXPERIENCIA LABORAL ======== -->
+            <section id="experiencia" class="section">
+                <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>Rantiyku</h3>
+                    <p>Systems and Development Analyst / Technology and Innovation Specialist (At present)</p>
+                    <small>Computer Engineering professional with a hybrid profile that combines software development, workflow automation, and systems management. My goal is to be the company's integral technology partner, ensuring both the creation of new solutions and the efficiency of daily operations.</small>
+                    <ul>
+                        <li><b>As a Developer:</b> I design, develop, and maintain the company's web systems and applications, with a focus on UI/UX (thanks to my background in design) to ensure intuitive and functional interfaces.</li>
+                        <li><b>As an Automator:</b> I analyze internal workflows to identify opportunities for improvement. I design and implement custom automation solutions, using platforms like n8n to connect systems and applications via APIs and Webhooks. The goal is to optimize operations, eliminate repetitive tasks, and scale the company's productivity.</li>
+                        <li><b>As IT Support:</b> I manage the general technology infrastructure, handle technical support for users, ensure data security, and monitor the network to ensure business continuity.</li>
+                    </ul>
+                </div>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>MS4M</h3>
+                    <p>Systems Analyst (2024)</p>
+                    <small>Systems Analyst at MS4M, responsible for systems monitoring, SQL Server database management, and administration of virtual machines in Linux. In charge of implementing and configuring servers for new clients.</small>
+                    <ul>
+                        <li>Implementation and configuration of servers for new clients.</li>
+                        <li>Optimization of monitoring and management of SQL Server databases.</li>
+                        <li>Administration of virtual machines in Linux.</li>
+                        <li>Resolution of critical incidents, improving response times.</li>
+                    </ul>
+                </div>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>DIGITAL KITSUNE</h3>
+                    <p>Frontend Developer (2023 - 2024)</p>
+                    <small>As a frontend web developer at Digital Kitsune, a leading digital marketing company, my role was to create intuitive and engaging interfaces to maximize the user experience.</small>
+                    <ul>
+                        <li>I led the development of new interfaces for key clients. I optimized the performance of existing websites, reducing load times and improving user satisfaction. I proposed the standardization of development to optimize delivery times. I participated in the customization of different plugins, resolving errors on various websites.</li>
+                    </ul>
+                </div>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>VIALCONS S.A.C</h3>
+                    <p>Systems Analyst and Full Stack Developer (2022 - 2023)</p>
+                    <small>Responsible for designing and implementing technological solutions to optimize efficiency in road infrastructure and construction projects.</small>
+                    <ul>
+                        <li>Led the complete design and development of the company's new website.</li>
+                        <li>Automated key business processes, reducing execution times and increasing productivity on projects.</li>
+                        <li>Performed significant maintenance and improvements to the internal system, increasing operational efficiency.</li>
+                        <li>Developed technical documentation (manuals, descriptive reports) and proposed strategic infrastructure improvements.</li>
+                    </ul>
+                </div>
+                <div class="content-item" data-aos="fade-left">
+                    <h3>ASESORANDO PERU E.I.R.L - SIGEFAC</h3>
+                    <p>Support and Development Analyst (2021 - 2022)</p>
+                    <small>A hybrid role focused on specialized technical assistance (Level 2/3) and the development of new functionalities for an electronic billing and management system.</small>
+                    <ul>
+                        <li>Actively designed and developed new web modules, adding direct functionality to the product and improving the customer experience.</li>
+                        <li>Identified, debugged, and corrected software flaws reported by clients, resulting in improved overall system performance.</li>
+                        <li>Provided technical support and managed the configuration of equipment and systems for end-users, resolving complex incidents.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Las demás secciones permanecen igual dentro de la columna derecha -->
+            <section id="habilidades" class="section">
+                <h2 class="section-title" data-aos="fade-up">Skills</h2>
+                    <h3 class="skill" data-aos="fade-up">Soft Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Communication</p><p>85%</p></div><div class="progress-bar"><div class="progress" data-progress="85%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Leadership</p><p>80%</p></div><div class="progress-bar"><div class="progress" data-progress="80%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Confidence</p><p>90%</p></div><div class="progress-bar"><div class="progress" data-progress="90%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>persevering</p><p>85%</p></div><div class="progress-bar"><div class="progress" data-progress="75%"></div></div></div>
+                    </div>
+
+                    <h3 class="skill" data-aos="fade-up">Software Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Adobe Photoshop</p><p>85%</p></div><div class="progress-bar"><div class="progress" data-progress="85%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Ilustrator</p><p>70%</p></div><div class="progress-bar"><div class="progress" data-progress="70%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Figma</p><p>70%</p></div><div class="progress-bar"><div class="progress" data-progress="80%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Capcut</p><p>60%</p></div><div class="progress-bar"><div class="progress" data-progress="60%"></div></div></div>
+                    </div>
+
+                    <h3 class="skill" data-aos="fade-up">Hard Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>WordPress</p><p>85%</p></div><div class="progress-bar"><div class="progress" data-progress="85%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>JavaScript</p><p>75%</p></div><div class="progress-bar"><div class="progress" data-progress="70%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>PHP</p><p>70%</p></div><div class="progress-bar"><div class="progress" data-progress="80%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>SQL</p><p>65%</p></div><div class="progress-bar"><div class="progress" data-progress="60%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>REACT</p><p>60%</p></div><div class="progress-bar"><div class="progress" data-progress="75%"></div></div></div>
+                    </div>
+
+                    <h3 class="skill" data-aos="fade-up">Other Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>UX/UI</p><p>65%</p></div><div class="progress-bar"><div class="progress" data-progress="85%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>Digital Marketing</p><p>75%</p></div><div class="progress-bar"><div class="progress" data-progress="70%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>N8N</p><p>75%</p></div><div class="progress-bar"><div class="progress" data-progress="80%"></div></div></div>
+                        <div class="skill-item" data-aos="fade-up"><div class="skill-item-tittle"><p>AWS</p><p>60%</p></div><div class="progress-bar"><div class="progress" data-progress="60%"></div></div></div>
+                    </div>
+            </section>
+
+            <section id="intereses" class="section">
+                 <h2 class="section-title" data-aos="fade-up">Interests</h2>
+                <div class="interests-container" data-aos="fade-up">
+                    <div class="interest-item"><div class="interest-item-tittle"><i class="fas fa-code"></i><h3>Development</h3></div><small>Passion for emerging technologies and developing personal projects. I am constantly learning new frameworks and languages.</small></div>
+                    <div class="interest-item"><div class="interest-item-tittle"><i class="fas fa-bar-chart"></i><h3>Business</h3></div><small>Interest in how technology scales businesses, with a focus on e-commerce, digital entrepreneurship, and process optimization.</small></div>
+                    <div class="interest-item"><div class="interest-item-tittle"><i class="fas fa-lightbulb"></i><h3>Entrepreneurship</h3></div><small>Startup mentality. I am passionate about conceptualizing ideas and business models, exploring how my skills in development, design, and automation can merge to create viable digital products.</small></div>
+                    <div class="interest-item"><div class="interest-item-tittle"><i class="fas fa-camera"></i><h3>Photography</h3></div><small>A hobby involving composition and visual aesthetics. This skill reinforces my focus on interface design (UI) and attention to detail.</small></div>
+                    <div class="interest-item"><div class="interest-item-tittle"><i class="fas fa-plane"></i><h3>Travel</h3></div><small>Interest in exploring new cultures. It fosters my ability to adapt to new environments and creative problem-solving.</small></div>
+                    
+                </div>
+            </section>
+            
+            <section id="cartera" class="section">
+                <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
+                <div class="swiper-container" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="https://erikavidrio.com/" target="_blank"><img src="assets/images/erikavidrio.webp" alt="Erika Vidrio" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://briengineering.com/" target="_blank"><img src="assets/images/briengineering.webp" alt="Bri Engineering" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://conectamentora.org/" target="_blank"></a><img src="assets/images/conecta-mentora.webp" alt="Conecta Mentora" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://barbaritebooks.com/" target="_blank"><img src="assets/images/barbaritas.webp" alt="Barbarite" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://gabstudioarq.com/" target="_blank"><img src="assets/images/gab-studio.webp" alt="Gab Studio" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://palmseedlings.com/" target="_blank"></a><img src="assets/images/palmseedlings.webp" alt="Palm Seedlings" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://pmodistro.pro/" target="_blank"><img src="assets/images/pmodistro.webp" alt="PMO Distro" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://portusaludmujer.com/" target="_blank"><img src="assets/images/por-tu-salud.webp" alt="Por tu salud mujer" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://purveekondal.com/" target="_blank"></a><img src="assets/images/purveekondal.webp" alt="Purve Kondal" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://www.solucionesganadoras.com/" target="_blank"><img src="assets/images/soluciones-ganadoras.webp" alt="Soluciones Ganadoras" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://steameducation.intecniacorp.pe/" target="_blank"><img src="assets/images/steam-education.webp" alt="Steam Education" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="https://yangqinghao.com/" target="_blank"></a><img src="assets/images/yangqinghao.webp" alt="Yangqinghao" loading="lazy"></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <section id="contacto" class="section">
+                <h2 class="section-title" data-aos="fade-up">Contact</h2>
+                <form class="contact-form" data-aos="fade-up" action="https://formspree.io/f/mvgdpnkw" method="POST">
+                    <input type="text" placeholder="Your name" name="name" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
+                    <input type="email" placeholder="Your email adress" name="email" required>
+                    <textarea placeholder="Your message" rows="5" name="message" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ======== PIE DE PÁGINA ======== -->
+    <footer class="footer">
+        <p>Thanks</p>
+    </footer>
+
+    <!-- Scripts (sin cambios) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+</html>

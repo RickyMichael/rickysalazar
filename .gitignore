@@ -1,0 +1,32 @@
+# ==========================
+# 🖥️ SISTEMA OPERATIVO
+# ==========================
+
+# Archivos de sistema de Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Archivos temporales o de respaldo
+*.tmp
+*.bak
+*.swp
+*.log
+
+# ==========================
+# 💻 EDITOR: Visual Studio Code
+# ==========================
+.vscode/
+.history/
+*.code-workspace
+
+# ==========================
+# 🧰 COMPILADOS / CACHES
+# ==========================
+*.DS_Store
+*.sass-cache
+*.cache
+*.map
+*.min.css.map
+*.min.js.map
