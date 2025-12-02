@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleIcon = document.getElementById('theme-toggle-icon');
     const body = document.body;
+    const logoPic = document.querySelector('.logo-pic');
 
     // Función para aplicar el tema guardado
     function applySavedTheme() {
@@ -146,10 +147,12 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.add('dark-mode');
             themeToggleIcon.classList.remove('fa-moon');
             themeToggleIcon.classList.add('fa-sun');
+            logoPic.setAttribute('src', 'assets/images/logo-rs-2025.webp');  
         } else {
             body.classList.remove('dark-mode');
             themeToggleIcon.classList.remove('fa-sun');
             themeToggleIcon.classList.add('fa-moon');
+            logoPic.setAttribute('src', 'assets/images/logo-rs-2025-dark.webp');
         }
     }
 
@@ -162,10 +165,12 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('theme', 'dark');
             themeToggleIcon.classList.remove('fa-moon');
             themeToggleIcon.classList.add('fa-sun');
+            logoPic.setAttribute('src', 'assets/images/logo-rs-2025.webp');
         } else {
             localStorage.setItem('theme', 'light');
             themeToggleIcon.classList.remove('fa-sun');
             themeToggleIcon.classList.add('fa-moon');
+            logoPic.setAttribute('src', 'assets/images/logo-rs-2025-dark.webp');
         }
     });
 
