@@ -176,4 +176,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Aplicar el tema guardado cuando la página se carga
     applySavedTheme();
+
+    /* ======== LÓGICA PARA EL BOTÓN DE VOLVER ARRIBA ======== */
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    // Función para mostrar/ocultar el botón
+    const toggleBackToTopBtn = () => {
+        // Si el scroll vertical es mayor a 300px
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    };
+
+    // Función para hacer scroll suave hacia arriba
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // ¡La magia del scroll suave!
+        });
+    };
+
+    // Escuchar el evento de scroll en la ventana
+    window.addEventListener('scroll', toggleBackToTopBtn);
+
+    // Escuchar el evento de clic en el botón
+    backToTopBtn.addEventListener('click', scrollToTop);
 });

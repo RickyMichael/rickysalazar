@@ -1,4 +1,5 @@
 /* ======== CONFIGURACIÓN GENERAL ======== */
+
 :root {
     --primary-color: #00F0FF;
     --secondary-color: #f0f0f0;
@@ -20,8 +21,8 @@ body.dark-mode {
     --shadow: 0 0 15px rgba(179, 179, 179, 0.7);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; /*overflow-x: hidden;*/ }
+html { scroll-behavior: smooth; /*overflow-x: hidden;*/}
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
@@ -90,10 +91,10 @@ li{
 
 /* ======== ENCABEZADO Y MENÚ (Sin cambios) ======== */
 .header {
-    position: fixed; top: 0; left: 0; width: 100%; display: flex;
+    /*position: sticky;*/ top: 0; left: 0; width: 100%; display: flex;
     justify-content: space-between; align-items: center; padding: 1rem 2rem;
     background-color: var(--header-color); backdrop-filter: blur(10px);
-    z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); height: var(--header-height);
+    z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); height: var(--header-height); overflow: hidden;
 }
 .menu-button { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color); transition: color 0.3s; }
 .menu-button:hover { color: var(--primary-color); }
@@ -144,8 +145,8 @@ li{
     animation: pulse 1.5s infinite ease-in-out;
 }
 .logo-pic {
-    width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
-    border: 8px solid var(--primary-color);
+    width: 150px; height: 150px; object-fit: cover;
+    /* border: 8px solid var(--primary-color); */
 }
 
 /* ======== FOTO DE PERFIL (EN COLUMNA IZQUIERDA) ======== */
@@ -267,9 +268,54 @@ li{
     box-shadow: var(--shadow);
 }
 
+/* ======== ESTILO PARA EL BOTÓN DE VOLVER ARRIBA ======== */
+#back-to-top-btn {
+    position: fixed; /* Lo mantiene en la misma posición en la pantalla */
+    bottom: 2rem;    /* 2rem desde abajo */
+    right: 2rem;     /* 2rem desde la derecha */
+    
+    width: 50px;     /* Ancho del botón */
+    height: 50px;    /* Alto del botón */
+    border-radius: 50%; /* Lo hace circular */
+    
+    background-color: var(--primary-color); /* Usa el color principal de tu paleta */
+    color: #ffffff; /* Icono en color blanco */
+    font-size: 1.5rem; /* Tamaño del icono */
+    
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Asegura que esté por encima de la mayoría del contenido */
+    
+    /* Estado inicial: oculto y ligeramente desplazado */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    
+    /* Transición suave para la aparición y desaparición */
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+/* Clase que se agregará con JS para mostrar el botón */
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top-btn:hover {
+    /* Efecto sutil al pasar el cursor */
+    background-color: #0097a7; /* Un tono más oscuro del color primario */
+    transform: scale(1.05);
+}
+
 
 /* ======== RESPONSIVE ======== */
 @media (max-width: 1024px) {
+    *, html{
+        overflow-x: hidden;
+    }
+
     .page-container {
         /* En pantallas pequeñas, las columnas se apilan una sobre otra */
         flex-direction: column;
@@ -282,6 +328,11 @@ li{
         height: auto;
         padding-bottom: 0;
     }
+
+    .btn-email{
+        margin-top: 1rem;
+    }
+
     .timeline {
         display: none; /* Ocultamos la línea de tiempo en móvil para simplificar */
     }
